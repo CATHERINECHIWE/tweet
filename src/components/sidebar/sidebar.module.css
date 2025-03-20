@@ -1,0 +1,14 @@
+.sideContainer{
+position: relative;
+/* display: grid; */
+}
+.sideContainer::after{
+    content: '';
+    position: absolute;
+     height: 100%;
+    width: 1px;
+    background-color: white;
+    right: 0;
+    top: 0;
+    right: 0.4;
+}

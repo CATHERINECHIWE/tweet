@@ -1,0 +1,54 @@
+.feedContainer{
+    position: relative;
+    width: 60%;
+
+
+}
+.feedContainer::after{
+    content:"";
+    position: absolute;
+     height: 100%;
+    width: 1px;
+    background-color: white;
+    /* text white */
+    top: 0;
+    right: 0;
+}
+
+    .feedContainer::before{
+        content:"";
+        position: absolute;
+         height: 1px;
+        width: 100%;
+        background-color: white;
+        left: 0;
+        top: 100px;
+}
+     .feedHeader{
+        width: 100%;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+    
+    }
+     .feedHeader div:hover{
+        background-color: white;
+     }
+    .active{
+        position:relative;
+    }
+    .active::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px
+        background-colour blue; 
+        bottom: -10px
+        left 0; 
+
+       
+
+    }
+
+    
+     
