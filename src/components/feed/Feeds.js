@@ -3,6 +3,7 @@
 import React from 'react'
 import styles from "./feeds.module.css" 
 import { useState } from 'react'   
+import Tweets from '../Tweets/Tweets'
 
 const Feeds = () => {  
      const [active, setActive ] = useState("For you")       
@@ -12,7 +13,7 @@ const Feeds = () => {
     }
     
   return (
-    <div className={`${styles.feedContainer}`}>
+  <div className={`${styles.feedContainer}`}>
 
       <div className={`${styles.feedHeader}`}>
 
@@ -39,6 +40,7 @@ const Feeds = () => {
       </div>     
     
 
+    <Tweets/>
     </div>     
   )
 }

@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { SearchProvider } from "@/components/contexts/SearchContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,12 +23,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${geistMono.variable } ${nunito.variable} antialiased`}
-      >
+    <html lang ="en">
+      <SearchProvider>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${geistMono.variable } ${nunito.variable} antialiased`}>
         {children}
       </body>
+      </SearchProvider> 
+      
     </html>
   );
 }

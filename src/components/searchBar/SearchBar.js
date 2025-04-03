@@ -1,17 +1,19 @@
 "use client"
 
-import React from 'react'
 import styles from "./searchBar.module.css"
 import { fetchData } from '@/utils/fetchData'
 import { useState } from 'react'
 import { fetchName } from '@/utils/fetchData'
-import Image from 'next/image'
+import Image from "next/image"
+import { useContext } from 'react'
+import { SearchContext } from "../contexts/SearchContext"
 
 
-const SearchBar = () => {
+const SearchBar = ({hr}) => {
+  const {name,result,setResult} = useContext(SearchContext);
 
 const [ userKeyword, setUserKeyword ] = useState('')     
-const [result, setResult] = useState([])
+// const [result, setResult] = useState([])
 const [Loading, setLoading  ]= useState (false)
 
 
@@ -37,7 +39,8 @@ const handleSearch = async (e) => {
   //  console.log(result)
 
   return (
-    <div>   
+    <div> 
+      {name}  
     <form onSubmit={handleSearch}>
         <input type="text" placeholder='Search post'
          value={userKeyword}     
@@ -66,7 +69,8 @@ const handleSearch = async (e) => {
             </div>
           ))}
         </div>
-      ))}   
+      ))
+      }   
 
       <h1>Hannah</h1> 
 
