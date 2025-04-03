@@ -118,7 +118,7 @@ import React from 'react'
 import { fetchTweets } from '@/utils/fetchData'
 import { useEffect, useState } from 'react'
 import { useContext } from 'react'
-import { SearchContext } from '@/contexts/SearchContext'
+import { SearchContext } from '../contexts/SearchContext'
 
 const Tweets = () => { 
   const { result, setResult } = useContext(SearchContext);
