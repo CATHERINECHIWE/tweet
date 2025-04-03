@@ -120,9 +120,7 @@ import { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { SearchContext } from '@/contexts/SearchContext'
 
-const Tweets = () => {
-
-    const [result, setResult] = useState([])  
+const Tweets = () => { 
   const { result, setResult } = useContext(SearchContext);
 
     const [resultt, setResultt] = useState([])  
@@ -144,7 +142,8 @@ const Tweets = () => {
  console.log(resultt)    
 
   return (
-    <div className='relative top-28'>   
+    <div className='relative top-28'>
+
 
     
     {
@@ -170,15 +169,10 @@ const Tweets = () => {
           </div>
         ))
       ) : (
-        resultt.map((item, index) => (    
-          <div key={index}>  
-            {item.entries?.map((entry, entryIndex) => (    
-              <div key={entryIndex}>
-          </div>
-        ))
-   }
-    } 
-    ****
+         <h1>Helo</h1>
+      )
+      )}
+  
 
     {/* {
       loading ? <p>Loading data</p> : (
@@ -189,14 +183,15 @@ const Tweets = () => {
                 <h1>{entry.content?.itemContent?.user_results?.result?.legacy?.location || "No Location"}</h1>
                 <h1>{entry.content?.itemContent?.user_results?.result?.legacy?.screen_name || "No Location"}</h1>
               </div>
-            ))}
-          </div>
+              ))}
+              </div>
         ))
       )
     }   */}
   
   
-    </div>
+  </div>
+
   )
 }
 
